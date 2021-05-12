@@ -1,0 +1,327 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    box-sizing:border-box;
+    font-size:62.5%; 
+      
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+    }
+
+/* Header */
+.header {
+    padding:1rem;
+    text-align: center;
+    color: white;
+    font-size:1.5rem;
+    background-color: #ffc716;
+    letter-spacing: 1rem;
+}
+/*Nav*/
+.barra {
+    display: flex;
+    background-color:  #abebc6;   
+}
+.barra a {
+    color: rgb(0, 0, 0);
+    padding: 8px 10px;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    font-size:1.2rem;
+    cursor:pointer;
+    margin:auto;
+    
+}
+.barra a:hover{
+    background-color:#1abc9c ;
+    color: black;
+    font-size:1.1rem;
+}
+  
+ /*columna izquierda*/ 
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+    color: #000000 ;
+}
+.side {
+    flex: 30%;
+    background-color:none;
+    padding: 20px;  
+
+} 
+.row .side .fakeimg {
+   display:flex;
+   flex-direction:column;
+   
+}
+.row .side .fakeimg p{
+    border:0.2rem solid #ffc716;
+    width: 100%;
+    text-align: center;
+    border-top: none;
+    border-right: none;
+    padding: 2rem;
+    font-size:1.2rem;
+}
+.fa-book-open{
+   font-size:3rem;
+   text-align:left;
+}
+.fa-laptop{
+    font-size:3rem;
+    text-align:right;
+}
+
+.compra , .quien{
+    font-size:1.25rem;
+}
+.fakeimg2{
+    margin: auto ;
+    margin-bottom: 2rem;
+    width:80%;
+    height:8rem;
+    background-color:#abebc6  ;
+    display:flex;
+    align-items: center;
+    box-shadow: 10px 10px 5px grey;   
+}
+.fakeimg2 i{
+    width:30%;
+    font-size:5rem;
+    background:none;
+    text-align:center;
+}
+.fakeimg2 p{
+    width:70%;
+    font-size:1rem;
+    background-color:none;
+    text-align:center;
+    margin-right: 1rem;
+}
+.paso1{
+    transition: transform 1;
+    cursor:pointer;
+    background-color: #abebc6;
+    animation-name: compra;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count:1;
+}
+.paso2{
+    transition: transform 1;
+    cursor:pointer;
+    background-color: #abebc6;
+    animation-name: compra;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+}
+.paso3{
+    transition: transform 1;
+    cursor:pointer;
+    background-color: #abebc6;
+    animation-name: compra;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+@keyframes compra {
+    0%   {background-color: #ffc716;}
+  50%  {background-color: #abebc6;}
+  100% {background-color: #abebc6;}
+}
+
+/*principal*/ 
+.main {
+    flex: 70%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.main h2{
+    font-size:1.2rem;
+    font-weight:bolder;
+    letter-spacing: 0.5rem;
+    text-shadow: 2px 2px 5px #abebc6;
+    text-align: center;
+}
+.imagen-destacados{
+    width: 80%;
+    margin: 3rem;
+    
+}
+/*footer*/ 
+footer {
+    padding: 20px;
+    text-align: center;
+    background:#ffc716;
+    color:rgb(0, 0, 0);
+}
+footer .contacto a{
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+footer .redes-sociales a{
+    text-decoration: none;
+    font-weight:bolder;
+    color:rgb(0, 0, 0);
+} 
+/* Responsive */
+
+@media screen and (min-width: 360px) and (max-width: 600px) {
+   
+    .barra a {
+        flex-grow: 1;
+        font-size:1rem;
+     }
+        
+}
+@media screen and (min-width: 600px) and (max-width: 768px){
+    
+    .row, .barra{   
+        flex-direction: column;
+    }
+    
+    .side {
+        font-size:1.6rem;
+        flex: 10%;
+        padding: 25px; 
+        margin:auto;
+       
+    }
+    .row .side .fakeimg {
+        background-size:contain;
+        width: 75%;
+        padding: 20px; 
+        margin:auto;
+        margin-bottom: 3rem;
+    }
+   
+    .imagen-destacados{
+        height:400px;
+        background-color:none;
+        background-size:contain;
+        font-size:10px; 
+    }
+    .barra a {
+       flex-grow: 1;
+       font-size:1rem;
+    }
+    
+    footer {
+        font-size:1.2rem;
+    } 
+    .side .fakeimg2 {
+         margin:auto;      
+    }      
+}
+ @media only screen and (min-width: 768px) and  (max-width: 992px) {
+    .header {
+        padding:1rem;
+        text-align: center;
+        color: white;
+        font-size:1.3rem;;
+    }
+    .barra {
+        display: flex;
+        flex-direction: row;   
+    }
+    .barra a {
+        font-size:1rem;
+        cursor:pointer;
+        width: 100%;
+    }
+    .side {
+        display: grid;
+        grid-template-areas: "izquierdatitulo   derechatitulo"
+                                "descripcion          paso1 "
+                                "descripcion          paso2 "
+                                ".        paso3 ";
+        
+        
+        grid-template-columns:50% 50%;
+        grid-template-rows:1rem ;
+        align-items: center;
+        justify-content: center;
+      
+        
+    }
+    .side .quien{
+        grid-area:izquierdatitulo;
+        font-size:1.2rem;  
+    
+    } 
+    .side .fakeimg{
+        grid-area:descripcion;  
+        object-fit:scale-down;
+        font-size:1rem;  
+        max-height:18rem;
+             
+    }
+    .side .compra{
+        grid-area:derechatitulo;
+        font-size:1.2rem;
+    } 
+    .side .paso1{
+        grid-area:paso1;
+   }
+    .side .paso2{
+        grid-area:paso2;
+    }
+    .side .paso3{
+        grid-area:paso3;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .main h2{
+        margin-top:4rem;
+    }
+    .barra a {
+        font-size:1.2rem;
+        cursor:pointer;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+   
+    .row, .barra{   
+        flex-direction: row;
+    }
+    .side {
+        font-size:1.2rem;
+        flex: 30%;
+        padding: 25px; 
+    }
+    .row .side .fakeimg {
+        background-size:contain;
+        width: 75%;
+        padding: 20px;
+        height:200px;
+    }
+    .main h2{
+        margin-top:6rem;
+    }
+    .imagen-destacados{
+        height:400px;
+        background-color:none;
+        background-size:contain;
+        font-size:1rem; 
+        margin-bottom:8rem;
+    }
+    .barra a {
+       flex-grow: 1;
+       font-size:1.2rem;
+       width:100%;
+    }
+    footer {
+        font-size:1.2rem;
+    }   
+} 
+ 

@@ -1,0 +1,94 @@
+
+.main form{
+	background-color: #abebc6;
+	border-radius:2.5rem;
+	color: rgb(0, 0, 0);
+	font-size: 1.3rem;
+	padding: 2rem;
+	margin:1rem;
+	width: 95%;
+    text-align:center;
+    display:flex;
+    flex-direction: row;
+}
+.main form .sobre{
+    width: 50%;
+}
+       
+.main form .sobre i{
+    text-align: center;
+    padding:2rem;
+    font-size:20rem;
+}
+.main .formulario p{
+    text-align: left;
+}
+.main .formulario input, textarea{
+	border: 0;
+	outline: none;
+    width: 280px;
+}
+.main form .formulario.field{
+	border: solid 1px  #abebc6;
+	padding: 10px;
+}
+.main form .formulario .field:focus{
+	border-color: #0e6655;
+    
+}
+.center-content{
+	text-align: center;
+}
+.formulario .btn{
+    border-radius: 1rem;
+    display: inline-block;
+    padding: 2rem;
+    text-decoration: none;
+}       
+.formulario .btn-green{
+    color: white;
+    background-color: #0e6655;
+}
+.formulario .btn-green:hover{
+    background-color:  #16a085 ;
+    color: black;	
+}
+.formulario  .btn-green:active{
+    background-color: #1abc9c;
+    color: black;
+}
+
+@media screen and (max-width: 700px) {
+        .main form .sobre{
+            width: 0%;
+        }   
+        .main form .sobre i{
+            font-size:0rem;
+        }
+        .main .formulario p{
+            text-align:left;
+        }
+        .main .formulario p input{
+            font-size:1.2rem;
+        }
+        .main .formulario input, textarea{
+            border: 0;
+            outline: none;
+            width:30rem;
+        }
+        .center-content{
+            text-align: center;
+            font-size:5rem;
+        }
+        .formulario .btn{
+            border-radius: 1rem;
+            display: inline-block;
+            padding: 2rem;
+            text-decoration: none;
+        
+        }
+        
+}
+
+
+

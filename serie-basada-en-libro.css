@@ -1,0 +1,68 @@
+.main{
+    background: none;
+}
+.main .cartelera div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background:#138d75;
+    margin:15px;
+    color:white;
+    
+}
+.main .cartelera div .descripcion{
+    flex-grow:1;
+    background-color:none;
+    color:rgb(255, 255, 255);
+    box-shadow:none; 
+    display: flex;
+    flex-direction:column; 
+    text-align: center;
+    margin-right: 5rem;
+}
+.main .cartelera div .descripcion p:first-child{
+    font-weight:bolder;
+}
+.main .cartelera div .descripcion p{
+    font-size:1.5rem;
+}
+.main .cartelera div .descripcion .texto-descriptivo{
+    font-size:1.3rem;
+    font-weight:none;
+}
+.main .cartelera div .foto img{
+    flex-grow:1;
+    height: 250px;
+    margin:auto;
+}
+.main .cartelera .boton-compra{
+    text-align: center;
+    background:none;
+}
+.main .cartelera .boton-compra i{
+    font-size:2.2rem;
+    width: 100%; 
+    color: black;
+}
+.main .cartelera .boton-compra i input{
+    font-size:1.5rem; 
+    background:#abebc6;
+    border-radius: 1rem;
+    border-color: #abebc6;
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+    width: 70%;
+    margin-left:1rem;
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 700px) {
+    .main .cartelera div .descripcion{
+        width:90%;
+    }
+    .main .cartelera div .foto img{
+        height: 0rem;
+        
+    }
+   
+}
