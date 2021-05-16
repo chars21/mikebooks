@@ -185,6 +185,9 @@ footer .redes-sociales a{
         flex-grow: 1;
         font-size:1rem;
      }
+     .row, .barra{   
+        flex-direction: column;
+    }
         
 }
 @media screen and (min-width: 600px) and (max-width: 768px){
