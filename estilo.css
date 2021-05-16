@@ -26,7 +26,10 @@ html{
 .barra {
     display: flex;
     background-color:  #abebc6;   
+    flex-direction: column;
 }
+    
+    
 .barra a {
     color: rgb(0, 0, 0);
     padding: 8px 10px;
